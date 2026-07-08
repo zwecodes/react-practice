@@ -10,17 +10,30 @@
 //   );
 // }
 
-import { CartProvider } from './CartContext';
-import Header from './Header';
-import ProductList from './ProductList';
-import Cart from './Cart';
+
+
+// import { CartProvider } from './CartContext';
+// import Header from './Header';
+// import ProductList from './ProductList';
+// import Cart from './Cart';
+
+// export default function App() {
+//   return (
+//     <CartProvider>
+//       <Header /> 
+//       <ProductList />
+//       <Cart /> 
+//     </CartProvider>
+//   );
+// }
+
+
+import UserFetcher from './UserFetcher1';
 
 export default function App() {
   return (
-    <CartProvider>
-      <Header /> 
-      <ProductList />
-      <Cart /> 
-    </CartProvider>
-  );
+    <div>
+      <UserFetcher />
+    </div>
+  )
 }
