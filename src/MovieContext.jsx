@@ -1,6 +1,6 @@
 import { createContext, useReducer } from "react";
 
-export const CartContext = createContext();
+export const MovieContext = createContext();
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -8,17 +8,17 @@ const reducer = (state, action) => {
             return [...state, action.payload];
         case "REMOVE":
             return state.filter(item => item.id !== action.payload);
-        default:
+        default: 
             return state;
     }
 };
 
-export function CartProvider({ children }) {
+export function WatchListProvider({ children }) {
     const [watchlist, dispatch] = useReducer(reducer, []);
 
     return (
-        <CartContext.Provider value={{ watchlist, dispatch }}>
+        <MovieContext.Provider value={{ watchlist, dispatch }}>
             {children}
-        </CartContext.Provider>
+        </MovieContext.Provider>
     );
 }
